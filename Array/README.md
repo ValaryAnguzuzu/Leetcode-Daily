@@ -20,5 +20,8 @@ This repository tracks my daily progress solving LeetCode problems.
 ### Dynamic Programming
 3. **Best Time to Buy and Sell Stock**  
   - **Difficulty**: Easy  
-  - **Approach**: Two Pointers  
-  - **Optimal Complexity**: O(n) time, O(1) space  
+  - **Approach1**: Two Pointers  
+  - **Optimal Complexity**: O(n) time, O(1) space
+- **Approach 2**: Single-Pass with Minimum Price Tracking  
+  - **Time Complexity (TC)**: O(n)  
+  - **Space Complexity (SC)**: O(1)  
