@@ -34,6 +34,9 @@ class Solution(object):
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
+        Approach: Hash Map  
+        Optimal Complexity: O(n) time, O(n) space  
+
         """
         HashMap = {}
         for i, val in enumerate(nums):

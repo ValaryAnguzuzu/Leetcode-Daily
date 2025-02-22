@@ -43,6 +43,9 @@ class Solution(object):
         """
         :type nums: List[int]
         :rtype: bool
+        Approach: Hash Set  
+        Optimal Complexity: O(n) time, O(n) space  
+
         """
         hashset = set()
         for num in nums:

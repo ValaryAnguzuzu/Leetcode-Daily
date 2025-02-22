@@ -34,27 +34,30 @@
 
 
 #        SOLUTION1
-# class Solution(object):
-#     def maxProfit(self, prices):
-#         """
-#         :type prices: List[int]
-#         :rtype: int
-#         """
-#         l, r = 0, 1 #l= buy, r= sell
-#         MaxProfit =  0
-#         while r < len(prices):
-#         #is it profitable?
-#             if prices[l] < prices[r]:
-#                 profit = prices[r] - prices[l]
-#                 MaxProfit = max(MaxProfit, profit)
-#             else: #shift l all the way to r is would be the cur lowest price
-#                 l =r
-#             r +=1 #either way move r forward
-#         return MaxProfit
-# if __name__ == "__main__":
-#     solution = Solution()
-#     print(solution.maxProfit([7, 1, 5, 3, 6, 4]))  # Output: 5
-#     print(solution.maxProfit([7, 6, 4, 3, 1]))       # Output: 0
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        Approach1: Sliding Window
+        Optimal Complexity: O(n) time, O(1) space
+
+        """
+        l, r = 0, 1 #l= buy, r= sell
+        MaxProfit =  0
+        while r < len(prices):
+        #is it profitable?
+            if prices[l] < prices[r]:
+                profit = prices[r] - prices[l]
+                MaxProfit = max(MaxProfit, profit)
+            else: #shift l all the way to r is would be the cur lowest price
+                l =r
+            r +=1 #either way move r forward
+        return MaxProfit
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.maxProfit([7, 1, 5, 3, 6, 4]))  # Output: 5
+    print(solution.maxProfit([7, 6, 4, 3, 1]))       # Output: 0
 
 
 #       SOLUTION2
@@ -64,6 +67,9 @@ class Solution(object):
         """
         :type prices: List[int]
         :rtype: int
+        Approach 2: Single-Pass with Minimum Price Tracking  
+        Time Complexity (TC): O(n)  
+        Space Complexity (SC): O(1)  
         """
         min_price = float('inf') #initialize to a very large number
         max_P = 0 #start with no profit
